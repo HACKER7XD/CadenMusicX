@@ -18,7 +18,7 @@ async def pause(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
     ):
-        await message.reply_text("❗ 𝐍𝐨𝐭𝐡𝐢𝐧𝐠 𝐈𝐬 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 ✨")
+        await message.reply_text("❗ KUCHH PLAY HI NHI HAI😂😂 ✨")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
         await message.reply_text("▶️ 𝐏𝐚𝐮𝐬𝐞 😔")
@@ -33,7 +33,7 @@ async def resume(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
     ):
-        await message.reply_text("❗ 𝐍𝐨𝐭𝐡𝐢𝐧𝐠 𝐈𝐬 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 ✨")
+        await message.reply_text("❗ KUCHH PLAY HI NHI HAI 😂😂 ✨")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
         await message.reply_text("⏸ 𝐑𝐞𝐬𝐮𝐦𝐞 🤩")
@@ -60,7 +60,7 @@ async def stop(_, message: Message):
 @authorized_users_only
 async def skip(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ 𝐍𝐨𝐭𝐡𝐢𝐧𝐠 😔  𝐈𝐬 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 🎶 𝐓𝐨 𝐒𝐤𝐢𝐩 🥀")
+        await message.reply_text("❗ KUCHH 😔 PLAY HI NHI HAI  🎶 SKIP KARNE KE LIYE  🥀")
     else:
         callsmusic.queues.task_done(message.chat.id)
 
@@ -72,4 +72,4 @@ async def skip(_, message: Message):
                 callsmusic.queues.get(message.chat.id)["file"]
             )
 
-        await message.reply_text("➡️ 𝐒𝐤𝐢𝐩 💫 𝐓𝐡𝐞 𝐂𝐮𝐫𝐫𝐞𝐧𝐭 ✨ 𝐒𝐨𝐧𝐠 🥀")
+        await message.reply_text("➡️ SONG BAND HO GYS  🥀")
